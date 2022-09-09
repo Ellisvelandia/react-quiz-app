@@ -8,10 +8,8 @@ const Home = () => {
       <div className="settings">
         <span style={{ fontSize: 30 }}>Quiz Setting</span>
         <div className="settings_select">
-          <TextField
-            style={{ marginBottom: 25 }}
-            label="Enter Your Name"
-            variant="outLined"
+          <TextField 
+          style={{marginBottom: 25}}
           />
         </div>
       </div>
