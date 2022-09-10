@@ -11,7 +11,8 @@ import Result from "./Pages/Result/Result";
 function App() {
   const [name, setName] = useState("");
   const [questions, setQuestions] = useState();
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState(0)
+
 
   const fetchQuestions = async (category = "", difficulty = "") => {
     const { data } = await axios.get(
@@ -23,25 +24,20 @@ function App() {
     setQuestions(data.results);
   };
 
+
+
   return (
     <BrowserRouter>
       <div className="app" style={{ backgroundImage: "url(./ques1.png" }}>
         <Header />
         <Switch>
           <Route path="/" exact>
-            <Home
-              name={name}
-              setName={setName}
-              fetchQuestions={fetchQuestions}
-            />
+            <Home name={name} setName={setName} fetchQuestions={fetchQuestions} />
           </Route>
           <Route path="/quiz">
             <Quiz
-              name={name}
-              questions={questions}
-              score={score}
-              setScore={setScore}
-              setQuestions={setQuestions}
+            name={name}
+            questions=
             />
           </Route>
           <Route path="/result">
