@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
-import { MenuItem, TextField } from "@mui/material";
-import { Categories } from "../../Data/Categories";
+import { MenuItem, TextField  } from '@mui/material';
+import Categories
 
 const Home = () => {
   return (
@@ -14,15 +14,12 @@ const Home = () => {
             label="Enter Your Name"
             variant="outlined"
           />
-          <TextField
-            select
-            style={{ marginBottom: 30 }}
-            label="Select Category"
-            variant="outlined"
-          >
-            {Categories}
-            <MenuItem></MenuItem>
-          </TextField>
+          <TextField 
+           select
+           style={{ marginBottom: 30 }}
+           label="Select Category"
+           variant="outlined"
+          ></TextField>
         </div>
       </div>
       <img src="/quiz.svg" alt="quiz img" className="banner" />
