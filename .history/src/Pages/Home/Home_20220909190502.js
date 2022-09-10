@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import { TextField } from '@mui/material';
+import { TextField } from "@mui/material";
 
 const Home = () => {
   return (
@@ -11,14 +11,14 @@ const Home = () => {
           <TextField
             style={{ marginBottom: 25 }}
             label="Enter Your Name"
-            variant="outlined"
+            variant="outLined"
           />
-          <TextField 
-           select
-           style={{ marginBottom: 30 }}
-           label="Select Category"
-           variant="outlined"
-          ></TextField>
+          <TextField
+            select
+            style={{ marginBottom: 30 }}
+            label="Select Category"
+            variant="outLined"
+          /> 
         </div>
       </div>
       <img src="/quiz.svg" alt="quiz img" className="banner" />

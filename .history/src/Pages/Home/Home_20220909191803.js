@@ -8,16 +8,28 @@ const Home = () => {
       <div className="settings">
         <span style={{ fontSize: 30 }}>Quiz Setting</span>
         <div className="settings_select">
-          <TextField
+        <TextField
             style={{ marginBottom: 25 }}
             label="Enter Your Name"
             variant="outlined"
+            // onChange={(e) => setName(e.target.value)}
           />
-          <TextField 
-           select
-           style={{ marginBottom: 30 }}
-           label="Select Category"
-           variant="outlined"
+          <TextField
+            select
+            label="Select Category"
+            value={category}
+            // onChange={(e) => setCategory(e.target.value)}
+            variant="outlined"
+            style={{ marginBottom: 30 }}
+          >
+             <TextField
+            style={{ marginBottom: 25 }}
+            label="Enter Your Name"
+            variant="outlined"
+            onChange={(e) => setName(e.target.value)}
+          />
+          <TextField
+        
           ></TextField>
         </div>
       </div>
