@@ -1,6 +1,6 @@
 import React from "react";
 import "./Home.css";
-import { MenuItem, TextField, Button } from "@mui/material";
+import { MenuItem, TextField } from "@mui/material";
 import Categories from "../../Data/Categories";
 
 const Home = () => {
@@ -8,7 +8,7 @@ const Home = () => {
     <div className="content">
       <div className="settings">
         <span style={{ fontSize: 30 }}>Quiz Setting</span>
-        <div className="settings__select">
+        <div className="settings_select">
           <TextField
             style={{ marginBottom: 25 }}
             label="Enter Your Name"
@@ -47,7 +47,7 @@ const Home = () => {
             variant="contained"
             color="primary"
             size="large"
-            // onClick={handleSubmit}
+            onClick={handleSubmit}
           >
             Start Quiz
           </Button>
