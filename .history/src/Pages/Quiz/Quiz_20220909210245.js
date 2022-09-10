@@ -1,4 +1,4 @@
-import { CircularProgress } from "@mui/material";
+import {  } } from "@mui/material";
 import { useEffect, useState } from "react";
 import Question from "../../components/Question/Question";
 import "./Quiz.css";

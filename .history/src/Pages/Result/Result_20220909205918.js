@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Button } from "@material-ui/core";
 import { useEffect } from "react";
 import { useHistory } from "react-router";
 import "./Result.css";
