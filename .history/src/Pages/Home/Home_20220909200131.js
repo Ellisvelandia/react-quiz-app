@@ -1,47 +1,43 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import "./Home.css";
-import { useHistory } from "react-router";
 import { MenuItem, TextField, Button } from "@mui/material";
-import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import Categories from "../../Data/Categories";
 
-const Home = ({ name, setName, fetchQuestions }) => {
-  const [category, setCategory] = useState("");
-  const [difficulty, setDifficulty] = useState("");
-  const [error, setError] = useState(false);
+const Home = ({name, setName, fetchQuestions}) => {
+const [category, setCategory] = useState("");
+const [difficulty, setDifficulty] = useState("");
+const [error, setError] = useState(false);
 
-  const history = useHistory();
+const history = useHistory
 
-  const handleSubmit = () => {
-    if (!category || !difficulty || !name) {
-      setError(true);
-      return;
-    } else {
-      setError(false);
-      fetchQuestions(category, difficulty);
-      history.push("/quiz");
-    }
-  };
+const handleSubmit = () => {
+  if (!category || !difficulty || !name) {
+    setError(true);
+    return;
+  }else {
+    setError(false);
+    fetchQuestions(category, difficulty);
+    history.push("/quiz");
+  }
+}
 
   return (
     <div className="content">
       <div className="settings">
         <span style={{ fontSize: 30 }}>Quiz Setting</span>
         <div className="settings__select">
-          {error && <ErrorMessage>Please Fill all the feilds</ErrorMessage>}
-
           <TextField
             style={{ marginBottom: 25 }}
             label="Enter Your Name"
             variant="outlined"
-            onChange={(e) => setName(e.target.value)}
+            onChange={(e) => setName (e.target.value)}
           />
           <TextField
             select
             style={{ marginBottom: 30 }}
             label="Select Category"
             variant="outlined"
-            onChange={(e) => setCategory(e.target.value)}
+            onChange={(e) => setCategory (e.target.value)}
             value={category}
           >
             {Categories.map((cat) => (
@@ -56,7 +52,7 @@ const Home = ({ name, setName, fetchQuestions }) => {
             label="Select Difficulty"
             variant="outlined"
             style={{ marginBottom: 30 }}
-            onChange={(e) => setDifficulty(e.target.value)}
+            onChange={(e) => setDifficulty (e.target.value)}
             value={difficulty}
           >
             <MenuItem key="Easy" value="easy">
